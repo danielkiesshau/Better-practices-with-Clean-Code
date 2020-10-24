@@ -5,7 +5,8 @@ const isSpecial = false
 const interestAmount = calculateInterestAmount(interestRate, interestRate, isSpecial);
 
 function calculateInterestAmount(interestRate, interestRate, isSpecial) {
-  let appliedInterest =  isSpecial ? (interestRate - 0.5) : interestRate;
+  const SPECIAL_INTEREST_RATE_DISCOUNT = 0.5;
+  let appliedInterest =  isSpecial ? (interestRate - SPECIAL_INTEREST_RATE_DISCOUNT) : interestRate;
   return (appliedInterest * interestRate).toFixed(2)
 }
 
